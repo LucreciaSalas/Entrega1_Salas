@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <form action="alta_proveedores" method="POST">
+        {% csrf_token %}  
+        <p>Nombre:</p>
+        <input type="text" name="nombre" required>
+        <p>CUIT:</p>
+        <input type="number" name="cuit" required>
+        <p>CBU:</p>
+        <input type="number" name="cbu" required>
+        <input type="submit" value="Registrar">
+        
+    </form>
+
+{% endblock %}

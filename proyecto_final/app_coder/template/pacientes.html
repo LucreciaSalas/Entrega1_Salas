@@ -1,0 +1,36 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Patología</th>
+            <th scope="col">Talla (cm)</th>
+            <th scope="col">Peso (kg)</th>
+            <th scope="col">Contorno cintura (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in pacientes %}
+            <tr>
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.nombre}}</td>
+                <td>{{n.edad}}</td>
+                <td>{{n.dni}}</td>
+                <td>{{n.patologia}}</td>
+                <td>{{n.talla}}</td>
+                <td>{{n.peso}}</td>
+                <td>{{n.contorno}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+{% endblock %}
